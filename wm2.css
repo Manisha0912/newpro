@@ -1,0 +1,510 @@
+
+
+/* Medium screens (tablets) */
+/* @media (max-width: 768px) {
+    .main h1 {
+        font-size: 60px; 
+        padding: 10px 4px;
+    }
+    .main h2 {
+        font-size: 1.2rem; 
+        padding: 10px 4px;
+    }
+    button {
+        width: 12rem; 
+        padding: 10px 4px;
+    }
+    .flex {
+        height: 60vw; 
+        width: 60vw;
+        gap: 5%;
+    }
+    .square {
+        flex: 10 0 24%; 
+        max-width: 24%;
+    } 
+    #startNewGame, #pauseGame {
+        font-size: 1.2rem; 
+        width: auto; 
+        padding: 8px 10px; 
+    }
+} */
+
+/* Small screens (mobile phones) */
+/* @media (max-width: 480px) {
+    .main h1 {
+        font-size: 40px; 
+        padding: 8px 3px;
+    }
+    .main h2 {
+        font-size: 1rem; 
+        padding: 8px 3px;
+    }
+    button {
+        width: 10rem; 
+        padding: 8px 3px;
+    }
+    .flex {
+        height: 80vw; 
+        width: 80vw;
+        min-height: 250px;
+        min-width: 250px;
+        gap: 3%; 
+    }
+     .square {
+        flex: 1 0 30%; 
+        max-width: 30%;
+        min-width: 50px; 
+        min-height: 50px;
+    } 
+    
+    #startNewGame, #pauseGame {
+        font-size: 1rem; 
+        width: auto; 
+        padding: 6px 8px; 
+    }
+    .cursor {
+        height: 60px; 
+        width: 50px;
+    }
+} */
+
+/* CSS */
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; 
+}
+.container{
+    min-height: 100vh;
+    width: 100vw;
+    background: url("./mario-1558063_1280.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size:cover;
+    
+    overflow: hidden;
+    
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.wam{
+
+    font-size: 80px; 
+    color: #ffffff; 
+    text-transform: uppercase; 
+    text-align: center; 
+    letter-spacing: 2px; 
+    text-shadow: 2px 2px 4px #000, 
+                 0 0 20px #780202, 
+                 0 0 30px #934e09, 
+                 0 0 40px #ffff00; 
+    margin-bottom: 20px; 
+    animation: glow 2s infinite; 
+}
+
+.main h2{
+    display: inline-block;
+    background: #D2FF72;
+    color: #000;
+    border-radius: 20px;
+    margin: 6px;
+    padding: 12px 5px;
+}
+
+button{
+    margin: 6px;
+    width: 20rem;
+    padding: 12px 5px;
+    border-radius: 20px;
+    border: none;
+    background-color: #5cd118;
+    box-shadow: 1px 1px 3px black;
+}
+
+#pauseGame{
+    display: none;
+}
+button:hover{
+    cursor: pointer;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-top: 5%;
+    height: 35vw; 
+    width: 35vw; 
+    background: url("./soil.jpg");
+    background-size: cover; 
+    gap: 10%;  
+    border-radius: 50px;
+    min-height: 300px; 
+    min-width: 300px;
+    
+} 
+
+  
+ .square {
+    flex: 1 0 22%; 
+    aspect-ratio: 1;
+    max-width: 22%; /*Limit the maximum width of squares 
+    background-color: rgb(11, 165, 42);
+    border-radius: 50%;
+    box-shadow: inset 0 10px 0 7px rgb(53, 21, 6),
+                inset 0 20px 20px 15px rgba(0, 0, 0, .3),
+                0 0 5px rgba(0, 0, 0, .5); 
+ } 
+
+
+ #startNewGame {
+    
+    font-size: 1.5rem; 
+    padding: 10px 20px; 
+    padding: 10px 20px; 
+    white-space: nowrap;
+}
+#pauseGame{
+    font-size: 1.5rem; 
+    padding: 10px 20px; 
+    padding: 10px 20px; 
+    white-space: nowrap;
+}
+
+
+.mole{
+    background: url('./mole.png');
+    background-size: cover;
+}
+.whacked {
+    background: url('./mole-whacked.png');
+    background-size: cover;
+}
+
+
+.cursor{
+    display:none;  
+    height: 110px;
+    width: 100px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    background-image: url('./hammer.png');
+    background-size: 100% 100%;
+    transform: translate(-20%, -20%);
+    transition: transform .1s;
+    pointer-events: none;
+}
+.cursor.active{
+    transform: translate(-20%, -20%) rotate(-45deg);
+} */
+
+/* Base styles (for all screens) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; 
+}
+
+.container {
+    min-height: 100vh;
+    width: 100vw;
+    background: url("./mario-1558063_1280.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.wam {
+    font-size: 5rem;
+    color: #ffffff; 
+    text-transform: uppercase; 
+    text-align: center; 
+    letter-spacing: 2px; 
+    text-shadow: 2px 2px 4px #000, 
+                 0 0 20px #780202, 
+                 0 0 30px #934e09, 
+                 0 0 40px #ffff00; 
+    margin-bottom: 20px; 
+    animation: glow 2s infinite; 
+}
+
+.main h2 {
+    display: inline-block;
+    background: #D2FF72;
+    color: #000;
+    border-radius: 20px;
+    margin: 6px;
+    padding: 12px 15px;
+    font-size: 1.5rem;
+}
+
+button {
+    margin: 6px;
+    padding: 12px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #5cd118;
+    box-shadow: 1px 1px 3px black;
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+
+#pauseGame {
+    display: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #4ab010;
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-top: 2%;
+    height: 500px;
+    width: 500px;
+    background: url("./soil.jpg");
+    background-size: cover; 
+    gap: 5%;  
+    border-radius: 50px;
+    padding: 20px;
+}
+
+.square {
+    flex: 1 0 28%;
+    aspect-ratio: 1;
+    max-width: 28%;
+    background-color: rgb(11, 165, 42);
+    border-radius: 50%;
+    box-shadow: inset 0 10px 0 7px rgb(53, 21, 6),
+                inset 0 20px 20px 15px rgba(0, 0, 0, .3),
+                0 0 5px rgba(0, 0, 0, .5); 
+    margin-bottom: 10px;
+}
+
+.mole {
+    background: url('./mole.png');
+    background-size: cover;
+}
+
+.whacked {
+    background: url('./mole-whacked.png');
+    background-size: cover;
+}
+
+.cursor {
+    display: none;
+    height: 110px;
+    width: 100px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    background-image: url('./hammer.png');
+    background-size: 100% 100%;
+    transform: translate(-20%, -20%);
+    transition: transform .1s;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.cursor.active {
+    transform: translate(-20%, -20%) rotate(-45deg);
+}
+
+/* Large screens (desktops and larger) */
+@media (min-width: 1200px) {
+    .wam {
+        font-size: 6rem;
+    }
+    
+    .main h2 {
+        font-size: 1.8rem;
+        padding: 15px 20px;
+    }
+    
+    button {
+        font-size: 1.8rem;
+        padding: 15px 25px;
+    }
+    
+    .flex {
+        height: 600px;
+        width: 600px;
+        gap: 8%;
+    }
+    
+    .square {
+        flex: 1 0 26%;
+        max-width: 26%;
+    }
+    
+    .cursor {
+        height: 130px;
+        width: 120px;
+    }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+    .wam {
+        font-size: 4rem;
+    }
+    
+    .main h2 {
+        font-size: 1.4rem;
+        padding: 10px 15px;
+    }
+    
+    button {
+        font-size: 1.4rem;
+        padding: 10px 20px;
+    }
+    
+    .flex {
+        height: 450px;
+        width: 450px;
+    }
+}
+
+/* Small tablets */
+@media (max-width: 768px) {
+    .wam {
+        font-size: 3.5rem;
+    }
+    
+    .main h2 {
+        font-size: 1.2rem;
+        padding: 8px 12px;
+    }
+    
+    button {
+        font-size: 1.2rem;
+        padding: 8px 16px;
+    }
+    
+    .flex {
+        height: 400px;
+        width: 400px;
+        gap: 5%;
+    }
+    
+    .square {
+        flex: 1 0 28%;
+        max-width: 28%;
+    }
+    
+    .cursor {
+        height: 90px;
+        width: 80px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 576px) {
+    .wam {
+        font-size: 2.5rem;
+    }
+    
+    .main h2 {
+        font-size: 1rem;
+        padding: 6px 10px;
+        margin: 4px;
+    }
+    
+    button {
+        font-size: 1rem;
+        padding: 8px 12px;
+        margin: 4px;
+    }
+    
+    .flex {
+        height: 300px;
+        width: 300px;
+        min-height: auto;
+        min-width: auto;
+        gap: 4%;
+    }
+    
+    .square {
+        flex: 1 0 30%;
+        max-width: 30%;
+    }
+    
+    .cursor {
+        height: 70px;
+        width: 60px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 375px) {
+    .wam {
+        font-size: 2rem;
+    }
+    
+    .main h2 {
+        font-size: 0.9rem;
+        padding: 5px 8px;
+    }
+    
+    button {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+    
+    .flex {
+        height: 250px;
+        width: 250px;
+        gap: 3%;
+    }
+    
+    .cursor {
+        height: 60px;
+        width: 50px;
+    }
+}
